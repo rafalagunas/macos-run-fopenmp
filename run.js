@@ -4,7 +4,7 @@ var myArgs = process.argv.slice(2);
 console.log(myArgs.toString());
 
 exec(
-  "g++-10 -fopenmp -o your_program -mavx " + myArgs,
+  "g++-10 -Wall -O3 -fopenmp -o your_program -mavx " + myArgs,
   (error, stdout, stderr) => {
     if (error) {
       console.log(`error: ${error.message}`);
